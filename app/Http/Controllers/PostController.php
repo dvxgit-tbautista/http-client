@@ -8,10 +8,10 @@ use Illuminate\Support\Facades\Http;
 class PostController extends Controller
 {
     public function index() {
-        $response = Http::get('https://jsonplaceholder.typicode.com/posts')->json();
+        // $response = Http::get('https://jsonplaceholder.typicode.com/posts')->json();
         // return $response;
 
-        return view('posts', compact('response'));
+        return view('posts');
     }
 
     public function edit($id) {

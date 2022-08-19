@@ -19,29 +19,11 @@
         </style>
     </head>
     <body>
-        <div>
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Body</th>
-                    <th scope="col">Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                    @foreach ($response as $data)
-                  <tr>
-                    <td>{{$data['id']}}</td>
-                    <td>{{$data['title']}}</td>
-                    <td>{{$data['body']}}</td>
-                    <td>
-                        <a href="{{route('post.edit', $data['id'])}}">Edit</a>
-                    </td>
-                  </tr>
-                  @endforeach
-                </tbody>
-              </table>
-        </div>
+        <div class="container">
+            <ul id="items" class="list-group"></ul>
+          </div>
     </body>
+    <?php
+    include "../api_helper/index.html";
+    ?>
 </html>
